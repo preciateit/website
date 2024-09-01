@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Notebook</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>My Notebook</h1>
+        <nav>
+            <a href="#translation">Translation</a>
+            <a href="#notebook">Notebook</a>
+            <a href="#comments">Comments</a>
+            <a href="#affirmations">Affirmations</a>
+        </nav>
+    </header>
+    
+    <main>
+        <section id="translation">
+            <h2>Translation Tool</h2>
+            <textarea id="englishText" placeholder="Enter text in English"></textarea>
+            <button onclick="translateText()">Translate</button>
+            <p id="spanishText"></p>
+        </section>
+        
+        <section id="notebook">
+            <h2>Notebook</h2>
+            <div id="subjects">
+                <button onclick="showSubject('personal')">Personal Experiences</button>
+                <button onclick="showSubject('essays')">Critical Essays</button>
+                <button onclick="showSubject('poems')">Poems</button>
+            </div>
+            <textarea id="entryText" placeholder="Write here..."></textarea>
+            <button onclick="saveEntry()">Save Entry</button>
+        </section>
+        
+        <section id="comments">
+            <h2>Comments</h2>
+            <div id="commentsList"></div>
+            <form onsubmit="submitComment(event)">
+                <input type="text" id="name" placeholder="Your name">
+                <textarea id="commentText" placeholder="Your comment"></textarea>
+                <button type="submit">Submit</button>
+            </form>
+        </section>
+        
+        <section id="affirmations">
+            <h2>Daily Affirmations</h2>
+            <p id="affirmationText"></p>
+            <button onclick="getAffirmation()">Get New Affirmation</button>
+        </section>
+    </main>
+    
+    <footer>
+        <p>Contact us at: <a href="mailto:info@example.com">info@example.com</a></p>
+    </footer>
+    
+    <script src="scripts.js"></script>
+</body>
+</html>
